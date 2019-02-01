@@ -56,9 +56,27 @@ console.log(`A situação do aluno é: ${situacao(75, 9)}`);
 
 //Exercicio 4
 
-let dn:(nome:string, idade:number) => number;
-dn = (nome, idade) => (nome && idade - 2019)
+function pessoa(nome:string, idade: number, mes:number):void{
+let anoNas = (mes <= 2) ? 2019 - idade - 1 : 2019-idade;
+console.log(`Data de Nascimento do ${nome} é ${anoNas}`);
+}
+//Exercicio 5
+
+let somar = 0;
+function cal(inc?:number):void{
+    somar += inc || 0; // || > Ou
+    console.log(`Soma: ${somar}` );
+}
+//chamada da função
+cal(10);
+cal(20);
+cal();
+
+//Exercicio 6
+//let verificaPar : (numero:number) => string;
+let verificaPar = numero => (numero % 2 == 0) ? "par" : "Impar";
+console.log(verificaPar(2));
 
 
-console.log(`Ano de nascimento é: ${dn ('wagner', 18)}`);
+
 

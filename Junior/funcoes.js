@@ -39,16 +39,5 @@ situacao = function (frequencia, media) { return (frequencia >= 75 && media >= 6
     ? "Aprovado" : "Reprovado"; };
 console.log("A situa\u00E7\u00E3o do aluno \u00E9: " + situacao(75, 9));
 //Exercicio 4
-var pessoa;
-pessoa = function (idade) { return (2018 - idade); };
-console.log("Data de Nascimento \u00E9: " + pessoa(18));
-//Exercicio 5
-var somar = 0;
-function cal(inc) {
-    somar += inc; // || > Ou
-    console.log("Soma: " + somar);
-}
-//chamada da função
-cal(10);
-cal(20);
-cal();
+var dn;
+console.log("Ano de nascimento \u00E9: " + function (idade) { return idade - 2018; });
