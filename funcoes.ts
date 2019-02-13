@@ -58,8 +58,9 @@ console.log(`A situação do aluno é: ${situacao(75, 9)}`);
 
 function pessoa(nome:string, idade: number, mes:number):void{
 let anoNas = (mes <= 2) ? 2019 - idade - 1 : 2019-idade;
-console.log(`Data de Nascimento do ${nome} é ${anoNas}`);
+console.log(`Data de Nascimento do  ${nome} é ${anoNas}`);
 }
+pessoa ('wagner',18,2);
 //Exercicio 5
 
 let somar = 0;
