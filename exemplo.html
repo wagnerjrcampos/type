@@ -1,0 +1,76 @@
+<script>
+    var aluno = {
+        nome: 'João',
+        media: 03
+    };
+
+    console.log(`O nome do aluno é: ${aluno.nome} e a média dele é: ${aluno.media}`);
+</script>
+
+<script>
+    var empregado = {
+        nomee: 'Wagner Junior',
+        cpf: 55530011542,
+        salario: 'R$2000'
+    };
+
+    console.log(
+    `O nome do empregado é: ${empregado.nomee} 
+    O Cpf do empregado é: ${empregado.cpf} 
+    O salario do empregado é: ${empregado.salario}`);
+</script>
+
+<script>
+    var endereco = {
+        cep:"",
+        logradouro:"",
+        bairro:"",
+        cidade:"",
+        estado:"",
+        complemento:""
+     }
+        
+    console.log(endereco);
+
+    var enderecoJSON = JSON.stringify(endereco); 
+
+    console.log(enderecoJSON);
+
+    var listaEnderecos = new Array();
+
+        endereco.cep='01001000',
+        endereco.logradouro='Praça da sé',
+        endereco.bairro='sé',
+        endereco.cidade='São Paulo',
+        endereco.estado='SP',
+        endereco.complemento='lado ímpar',
+    
+    listaEnderecos[0] = endereco;   
+     
+    endereco = new  Object();
+
+        endereco.cep='01001003',
+        endereco.logradouro='Praça ',
+        endereco.bairro='as',
+        endereco.cidade='São Pau',
+        endereco.estado='SP',
+        endereco.complemento='',
+
+    listaEnderecos[1] = endereco;
+     
+    endereco = new Object();
+
+        endereco.cep='01001002',
+        endereco.logradouro=' sé',
+        endereco.bairro='smj',
+        endereco.cidade='São Paul',
+        endereco.estado='SP',
+        endereco.complemento='',    
+           
+    listaEnderecos[2] = endereco;
+
+    console.log(JSON.stringify(listaEnderecos));
+
+    
+
+</script>

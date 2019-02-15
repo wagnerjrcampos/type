@@ -1,0 +1,48 @@
+<script>
+        var pessoa = {
+            nome:"",
+            rg:"",
+            cpf:"",
+            datanascimeto:"",
+         }
+            
+        console.log(pessoa);
+    
+        var pessoaJSON = JSON.stringify(pessoa); 
+    
+        console.log(pessoaJSON);
+    
+        var listaPessoa = new Array();
+    
+            pessoa.nome='Wagner',
+            pessoa.rg='05542465',
+            pessoa.cpf='021544655',
+            pessoa.datanascimeto='09/10/2000',
+        
+        listaPessoa[0] = pessoa;   
+         
+        pessoa = new  Object();
+    
+            pessoa.nome='felipe',
+            pessoa.rg='05542465',
+            pessoa.cpf='021544655',
+            pessoa.datanascimeto='09/10/2000',
+    
+        listaPessoa[1] = pessoa;
+         
+        pessoa = new Object();
+    
+            pessoa.nome='junior',
+            pessoa.rg='05542465',
+            pessoa.cpf='021544655',
+            pessoa.datanascimeto='09/10/2000',
+
+        listaPessoa[2] = pessoa;
+    
+        console.log(JSON.stringify(listaPessoa));
+    
+        
+    
+    </script>
+
+    

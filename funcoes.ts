@@ -49,7 +49,7 @@ console.log(info('Ainda falta 1h'));
 //Funções de seta com expressão ternária
 
 let situacao:(frequencia:number, media:number) => string;
-situacao = (frequencia, media) => (frequencia >= 75 && media >= 6)
+situacao = (frequencia, media) => (frequencia >= 75 && media >= 6) //&& = "E" || = ou
 ? "Aprovado" : "Reprovado";
 
 console.log(`A situação do aluno é: ${situacao(75, 9)}`);

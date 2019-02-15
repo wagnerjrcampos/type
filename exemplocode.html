@@ -1,0 +1,204 @@
+<!--
+    =====>> Material de Leitura para apoio <<=====
+Objeto - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Trabalhando_com_Objetos
+JSON - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON
+Array - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
+Template String - https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/template_strings
+JQuery - https://developer.mozilla.org/en-US/docs/Glossary/jQuery
+-->
+
+<!-- Exemplo 01 -->
+<script>
+        // definição de um objeto populado
+        var aluno = {
+            nome: 'Joãozinho',
+            media: 0.3
+        };
+    
+        // saída do objeto
+        //console.log(aluno);
+    
+        // saída do objeto em template string
+        //console.log(`O nome do aluno é: ${aluno.nome} e a média dele é: ${aluno.media}`);
+    </script>
+    
+    <!-- Exemplo 02 -->
+    <script>
+    
+        // definição de um objeto vazio
+        var endereco = {
+            cep:"",
+            logradouro:"",
+            bairro: "",
+            cidade: "",
+            estado: "",
+            complemento: ""
+        }
+        
+        // cria uma lista de enderecos;
+        var listaEnderecos = new Array();
+    
+        // atribuir valores do primeiro objeto
+        endereco.cep = '01001-000';
+        endereco.logradouro = 'Praça da Sé';
+        endereco.bairro = 'Sé';
+        endereco.cidade = 'São Paulo';
+        endereco.estado = 'SP';
+        endereco.complemento = 'lado ímpar';
+            
+        // atribui os valores do endereço para a primeira posição do array
+        listaEnderecos[0] = endereco;
+    
+        // impressão do objeto
+        //console.log(endereco);
+    
+        // converter o objeto em JavaScript para JSON
+        //var enderecoJSON = JSON.stringify(endereco);
+        // impressão do objeto JSON
+        //console.log(enderecoJSON);
+    
+        // criar instancia (área de alocação)
+        endereco = new Object();
+    
+        // atribuir valores do segundo objeto
+        endereco.cep = '26210-200';
+        endereco.logradouro = 'Rua Coronel Carlos Matos';
+        endereco.bairro = 'Centro';
+        endereco.cidade = 'Nova Iguaçu';
+        endereco.estado = 'RJ';
+        endereco.complemento = '';
+    
+        listaEnderecos[1] = endereco;
+    
+        endereco = new Object();
+    
+        // atribuir valores do terceiro objeto
+        endereco.cep = '25040-080';
+        endereco.logradouro = 'Rua Bariri';
+        endereco.bairro = 'Vila Rosário';
+        endereco.cidade = 'Duque de Caxias';
+        endereco.estado = 'RJ';
+        endereco.complemento = '';
+    
+        listaEnderecos[2] = endereco;
+    
+        // impressão do Array em JSON
+        console.log(JSON.stringify(listaEnderecos));
+    
+    </script>
+    <!--
+        JSON.stringify - serve para converter um objeto em JavaScript para JSON
+        JSON.parse - serve para converter um JSON para objeto JavaScript
+    -->
+    
+    <!-- Exemplo 02 -->
+    <script>
+        // estrutura em JSON
+        var txtJSON = `
+            {
+                "cep": "25040-080",
+                "logradouro": "Rua Bariri",
+                "complemento": "",
+                "bairro": "Vila Rosário",
+                "localidade": "Duque de Caxias",
+                "uf": "RJ",
+                "unidade": "",
+                "ibge": "3301702",
+                "gia": ""
+            }
+        `;
+        /* http://viacep.com.br/ws/SEU_CEP/json */
+        // obj recebe o JSON convertido em Objeto JavaScript
+        var obj = JSON.parse(txtJSON);
+        // saída do logradouro 
+        console.log(obj.logradouro);
+    
+        // CONVERTER um array
+        //http://viacep.com.br/ws/RJ/Nova%20Iguacu/getulio/json/
+    
+        var txtRuas = `
+        [
+            {
+            "cep": "26062-570",
+            "logradouro": "Avenida Getúlio",
+            "complemento": "",
+            "bairro": "Cidade Jardim Parque Estoril",
+            "localidade": "Nova Iguaçu",
+            "uf": "RJ",
+            "unidade": "",
+            "ibge": "3303500",
+            "gia": ""
+            },
+            {
+            "cep": "26042-220",
+            "logradouro": "Rua Getúlio Dias",
+            "complemento": "",
+            "bairro": "Autódromo",
+            "localidade": "Nova Iguaçu",
+            "uf": "RJ",
+            "unidade": "",
+            "ibge": "3303500",
+            "gia": ""
+            },
+            {
+            "cep": "26255-060",
+            "logradouro": "Rua Getúlio Vargas",
+            "complemento": "",
+            "bairro": "Centro",
+            "localidade": "Nova Iguaçu",
+            "uf": "RJ",
+            "unidade": "",
+            "ibge": "3303500",
+            "gia": ""
+            },
+            {
+            "cep": "26035-370",
+            "logradouro": "Praça Getúlio de Moura",
+            "complemento": "",
+            "bairro": "Ponto Chic",
+            "localidade": "Nova Iguaçu",
+            "uf": "RJ",
+            "unidade": "",
+            "ibge": "3303500",
+            "gia": ""
+            },
+            {
+            "cep": "26221-040",
+            "logradouro": "Avenida Getúlio de Moura",
+            "complemento": "",
+            "bairro": "Centro",
+            "localidade": "Nova Iguaçu",
+            "uf": "RJ",
+            "unidade": "",
+            "ibge": "3303500",
+            "gia": ""
+            },
+            {
+            "cep": "26281-350",
+            "logradouro": "Rua Doutor Getúlio de Moura",
+            "complemento": "",
+            "bairro": "Jardim Iguaçu",
+            "localidade": "Nova Iguaçu",
+            "uf": "RJ",
+            "unidade": "",
+            "ibge": "3303500",
+            "gia": ""
+            }
+        ]
+        `;
+        
+        // converte o array JSON para Objeto
+        var ruasObj = JSON.parse(txtRuas);
+        // imprime o array
+        console.log(ruasObj);
+        // imprimir os valores do terceiro endereco da lista
+        console.log(ruasObj[2]);
+    </script>
+    
+    <script>
+    
+    /*  
+             Consulta de CNPJ
+        https://www.receitaws.com.br/v1/cnpj/03672347011103
+    */
+    </script>
